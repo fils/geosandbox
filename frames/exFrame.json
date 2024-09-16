@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dateCreated": "https://schema.org/date"
+  },
+  "@explicit": "true",
+  "@type":     "Dataset",
+  "abstract": "",
+  "description": "",
+  "dateCreated": "",
+  "distribution": {},
+  "isBasedOn": [
+    {
+      "@type": {"@default": "CreativeWork"},
+      "@explicit": "true",
+      "name": ""  ,
+      "identifier" : "",
+      "url": ""
+    }
+  ],
+  "identifier" : {},
+  "keywords": "",
+  "license": "",
+  "name": "",
+  "sameAs": "",
+  "url": ""
+}

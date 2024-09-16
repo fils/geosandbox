@@ -1,0 +1,330 @@
+{
+  "@context": {
+    "@language": "en",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataBiases": "cr:dataBiases",
+    "dataCollection": "cr:dataCollection",
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "personalSensitiveInformation": "cr:personalSensitiveInformation",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://example.org/genid/data",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "repo",
+      "name": "repo",
+      "description": "The Hugging Face git repository.",
+      "contentUrl": "https://huggingface.co/datasets/oih/oih-wis2/tree/refs%2Fconvert%2Fparquet",
+      "encodingFormat": "git+https",
+      "sha256": "https://github.com/mlcommons/croissant/issues/80"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-default",
+      "name": "parquet-files-for-config-default",
+      "description": "The underlying Parquet files as converted by Hugging Face (see: https://huggingface.co/docs/dataset-viewer/parquet).",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "default/*/*.parquet"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "default",
+      "name": "default",
+      "description": "oih/oih-wis2 - 'default' subset",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "default/id",
+          "name": "default/id",
+          "description": "Column 'id' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "default/type_list",
+          "name": "default/type_list",
+          "description": "Column 'type_list' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "type_list"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "default/name_list",
+          "name": "default/name_list",
+          "description": "Column 'name_list' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "name_list"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "default/kw_list",
+          "name": "default/kw_list",
+          "description": "Column 'kw_list' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "kw_list"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "default/b_URL",
+          "name": "default/b_URL",
+          "description": "Column 'b_URL' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "b_URL"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "default/b_desc",
+          "name": "default/b_desc",
+          "description": "Column 'b_desc' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "b_desc"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "default/b_headline",
+          "name": "default/b_headline",
+          "description": "Column 'b_headline' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "b_headline"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "default/geom_list",
+          "name": "default/geom_list",
+          "description": "Column 'geom_list' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "geom_list"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "default/wkt_list",
+          "name": "default/wkt_list",
+          "description": "Column 'wkt_list' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "wkt_list"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "default/geojson",
+          "name": "default/geojson",
+          "description": "Column 'geojson' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "geojson"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "default/tc_list",
+          "name": "default/tc_list",
+          "description": "Column 'tc_list' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "tc_list"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "default/dp_list",
+          "name": "default/dp_list",
+          "description": "Column 'dp_list' from the Hugging Face parquet file.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-default"
+            },
+            "extract": {
+              "column": "dp_list"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "oih-wis2",
+  "description": "oih/oih-wis2 dataset hosted on Hugging Face and contributed by the HF Datasets community",
+  "alternateName": [
+    "oih/oih-wis2"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "Ocean InfoHub",
+    "url": "https://huggingface.co/oih"
+  },
+  "keywords": [
+    "cc0-1.0",
+    "10K - 100K",
+    "parquet",
+    "Text",
+    "Datasets",
+    "pandas",
+    "Croissant",
+    "Polars",
+    "🇺🇸 Region: US"
+  ],
+  "license": "https://choosealicense.com/licenses/cc0-1.0/",
+  "url": "https://huggingface.co/datasets/oih/oih-wis2",
+  "subjectOf": [
+    {
+      "@id": "https://example.org/genid/data/subof",
+      "url": "https://samples.earth/id/do/bqs2dn2u6s73o70jdup0.geojson",
+      "@type": "DigitalDocument",
+      "format": [
+        "application/vnd.geo+json"
+      ],
+      "conformsTo": "https://igsn.org/schema/spatial.schema.json"
+    }
+  ],
+  "geosparql:hasGeometry": {
+    "@id": "https://example.org/genid/data/geosparql",
+    "@type": "http://www.opengis.net/ont/sf#Point",
+    "geosparql:asWKT": {
+      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "@value": "POINT(-76 -18)"
+    },
+    "geosparql:crs": {
+      "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    }
+  },
+  "geoblob": {
+    "@id": "https://example.org/genid/data/geoblob",
+    "type": "GeometryCollection",
+    "geometries": [
+      {
+        "@id": "https://example.org/genid/data/geoblob/point",
+        "type": "Point",
+        "coordinates": [
+          -76,
+          -18
+        ]
+      }
+    ]
+  },
+  "spatialCoverage": {
+    "@id": "https://example.org/genid/data/scov",
+    "@type": "Place",
+    "geo": {
+      "@id": "https://example.org/genid/data/scov/geo",
+      "@type": "GeoCoordinates",
+      "latitude": -18,
+      "longitude": -76
+    }
+  }
+}

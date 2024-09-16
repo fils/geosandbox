@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dateCreated": "https://schema.org/date",
+    "geosparql": "http://www.opengis.net/ont/geosparql#"
+  },
+  "@explicit": "true",
+  "@type":     "Dataset",
+  "description": "",
+  "subjectOf": {},
+  "geosparql:hasGeometry": {},
+  "geoblob": {},
+  "spatialCoverage": {},
+  "url": ""
+}
